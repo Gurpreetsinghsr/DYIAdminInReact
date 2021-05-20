@@ -1,0 +1,166 @@
+/* https://bootsnipp.com/snippets/Q0dAX */
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  30% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.sideBar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+.sideBar a {
+  text-decoration: none;
+}
+
+.sideBar .sidebarMenu ul li a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  position: relative;
+  padding: 8px 25px 8px 15px;
+  color: #ccc;
+}
+.sideBar .sidebarMenu ul li.active > a {
+  color: var(--color2);
+}
+
+.sideBar .sidebarMenu ul li a i {
+  margin-right: 10px;
+  font-size: 14px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 4px;
+  background: #3a3f48;
+  color: var(--color1);
+  display: inline-block;
+}
+
+.sideBar .sidebarMenu ul li a:hover > i::before {
+  display: inline-block;
+  animation: swing ease-in-out 0.5s 1 alternate;
+}
+
+.sideBar .sidebarMenu .sidebar-dropdown > a:after {
+  content: "";
+  border-top: 2px solid;
+  border-right: 2px solid;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 7px;
+  height: 7px;
+  position: absolute;
+  top: 18px;
+  right: 14px;
+}
+
+.sideBar .sidebarMenu .sidebar-dropdown.active > a:after {
+  transform: rotate(135deg);
+}
+
+.sideBar .sidebarMenu .sidebar-dropdown .sidebar-submenu li {
+  padding-left: 45px;
+  font-size: 11px;
+}
+
+.sideBar .sidebarMenu .sidebar-dropdown .sidebar-submenu li a:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border: 1px solid;
+  display: inline-block;
+  margin-right: 4px;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  margin-top: -3px;
+  left: 2px;
+}
+
+.sideBar .sidebarMenu .sidebar-submenu {
+  display: none;
+}
+.sidebarMenu {
+  max-height: calc(100% - 90px);
+  height: calc(100% - 90px);
+  overflow-y: auto;
+  position: relative;
+}
+/*--------------------------side-footer------------------------------*/
+
+.sidebar-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  background: #3a3f48;
+}
+
+.sidebar-footer > a {
+  flex-grow: 1;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  position: relative;
+}
+.sidebar-footer > a + a {
+  border-left: 1px solid #333;
+}
+.sidebar-footer > a .notification {
+  position: absolute;
+  top: 0;
+}
+.sideBar .sidebarMenu .sidebar-dropdown.active > a,
+.sidebar-footer > a:hover {
+  color: var(--color2);
+}
+
+.sideBar ul li:hover a i,
+.sideBar .sidebar-dropdown .sidebar-submenu li a:hover:before,
+.sideBar .sidebarMenu .sidebar-dropdown.active a i {
+  color: var(--color2);
+  text-shadow: 0px 0px 10px rgb(var(--color2) / 50%);
+}
+
+.sideBar .headerMenu {
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 15px;
+  color: #6c7b88;
+}
+.sideBarHeader {
+  background: var(--color1);
+  padding: 12px;
+}
+.tooltip {
+  font-size: 11px;
+}
