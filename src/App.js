@@ -1,20 +1,15 @@
-import React from 'react';
-import SideBar from './components/sideBar/sideBar'
-import NavBar from './components/navBar/NavBar';
-import MainSpace from './components/mainSpace/mainSpace';
-
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import Login from "./components/login/login";
+import DefaultPage from "./components/login/defaultPage";
 
 function App() {
   return (
     <React.Fragment>
-      <div className="paddingForHeader">
-        <NavBar></NavBar>
-          <main className="main" id="main">
-            <SideBar></SideBar>
-            <MainSpace></MainSpace>
-          </main>
-      </div>
-      
+      <Switch>
+        <Route path="/default" component={DefaultPage}></Route>
+        <Route path="/" exact component={Login}></Route>
+      </Switch>
     </React.Fragment>
   );
 }
