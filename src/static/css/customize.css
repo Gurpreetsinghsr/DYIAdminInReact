@@ -357,6 +357,7 @@ navbar-light .navbar-nav .nav-link {
 }
 
 .siteInput {
+  background-color: white;
   height: inherit;
   border-radius: 0px;
   font-size: 12px;

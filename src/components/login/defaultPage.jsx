@@ -10,11 +10,7 @@ const DefaultPage = () => {
       <main className="main" id="main">
         <SideBar></SideBar>
         <div className="mainPart transiton">
-          <div className="container-fluid">
-            <div className="row px-2">
-              <EventSettingsMain />
-            </div>
-          </div>
+          <EventSettingsMain />
         </div>
       </main>
     </div>
