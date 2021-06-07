@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class SideBarContent extends Component {
   render() {
@@ -10,7 +11,7 @@ class SideBarContent extends Component {
               <span>General</span>
             </li>
             <li className="sidebar-dropdown">
-              <a
+              <Link
                 className="btn-toggle collapsed"
                 data-bs-toggle="collapse"
                 aria-expanded="false"
@@ -20,45 +21,118 @@ class SideBarContent extends Component {
                   <i className="icon-speedometer" />
                   <span>Dashboard</span>
                 </div>
-              </a>
+              </Link>
 
               <div className="collapse" id="home-collapse">
                 <ul>
                   <li>
-                    <a href="dashboard.html">Dashboard </a>
+                    <Link to="#">Registration Summary </Link>
                   </li>
                   <li>
-                    <a href="dashboard1.html">Dashboard 1</a>
+                    <Link to="#">Attendee Summary</Link>
                   </li>
                   <li>
-                    <a href="dashboard2.html">Dashboard 2</a>
+                    <Link to="#">Virtual Event Summary</Link>
+                  </li>
+                  <li>
+                    <Link to="#">Track N Booth wise Report</Link>
                   </li>
                 </ul>
               </div>
             </li>
             <li className=" sidebar-dropdown">
-              <a
-                href="#"
+              <Link
                 className="btn-toggle collapsed "
                 data-bs-toggle="collapse"
                 aria-expanded="false"
-                data-bs-target="#E-collapse"
+                data-bs-target="#GlobalSettings"
               >
-                <a className="p-0">
-                  <i className="icon-basket-loaded"></i>
-                  <span>E-commerce</span>
-                </a>
-              </a>
-              <div className="collapse" id="E-collapse">
+                <div className="p-0">
+                  <i className="icon-settings"></i>
+                  <span>Global Settings</span>
+                </div>
+              </Link>
+              <div className="collapse" id="GlobalSettings">
                 <ul>
                   <li>
-                    <a href="#">Products </a>
-                  </li>
-                  <li className="active">
-                    <a href="#">Orders</a>
+                    <Link to="/default/eventsettings">Event Settings </Link>
                   </li>
                   <li>
-                    <a href="#">Credit cart</a>
+                    <Link to="/default/imagegallery">Image Gallery</Link>
+                  </li>
+                  <li>
+                    <Link to="/default/resourcegallery">Resource Gallery</Link>
+                  </li>
+                  <li>
+                    <Link to="/default/managerooms">Manage Rooms</Link>
+                  </li>
+                  <li>
+                    <Link to="/default/managespeakers">Manage Speakers</Link>
+                  </li>
+                  <li>
+                    <Link to="/default/manageagenda">Manage Agenda</Link>
+                  </li>
+                  <li>
+                    <Link to="/default/manageresources">Manage Resources</Link>
+                  </li>
+                  <li>
+                    <Link to="/default/managequiz">Manage Quiz</Link>
+                  </li>
+                  <li>
+                    <Link to="/default/managenotification">
+                      Manage Nortification
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/default/managepolls">Manage Polls</Link>
+                  </li>
+                  <li>
+                    <Link to="/default/managepointsystem">
+                      Manage Points System
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/default/Regesterpagelayoutsetting">
+                      Register Page Layout Setting
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/default/manageemailsmssetting">
+                      Email SMS Setting
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/default/campaignlinks">Campaign Links</Link>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li className="sidebar-dropdown">
+              <Link
+                className="btn-toggle collapsed"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+                data-bs-target="#ManageDelegates"
+              >
+                <div className="p-0">
+                  <i className="icon-speedometer" />
+                  <span>Manage Delegates</span>
+                </div>
+              </Link>
+
+              <div className="collapse" id="ManageDelegates">
+                <ul>
+                  <li>
+                    <Link to="#">Orders </Link>
+                  </li>
+                  <li>
+                    <Link to="#">Delegate List</Link>
+                  </li>
+                  <li>
+                    <Link to="#">Manage Nortification</Link>
+                  </li>
+                  <li>
+                    <Link to="#">Manage Polls</Link>
                   </li>
                 </ul>
               </div>
@@ -66,15 +140,40 @@ class SideBarContent extends Component {
             <li className="headerMenu">
               <span>Extra</span>
             </li>
-            <li>
-              <a href="#">
-                <i className="icon-calendar"></i> <span>Calendar</span>
-              </a>
+            <li className="sidebar-dropdown">
+              <Link
+                className="btn-toggle collapsed"
+                data-bs-toggle="collapse"
+                aria-expanded="false"
+                data-bs-target="#DownloadReports"
+              >
+                <div className="p-0">
+                  <i className="icon-basket-loaded" />
+                  <span>Download Reports</span>
+                </div>
+              </Link>
+
+              <div className="collapse" id="DownloadReports">
+                <ul>
+                  <li>
+                    <Link to="#">Delegate Visit Report </Link>
+                  </li>
+                  <li>
+                    <Link to="#">Room Wise Report</Link>
+                  </li>
+                  <li>
+                    <Link to="#">Resource Wise Report</Link>
+                  </li>
+                  <li>
+                    <Link to="#">Exhibitor Wise Report</Link>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li>
-              <a href="#">
+              <Link to="#">
                 <i className="icon-folder-alt"></i> <span>Examples</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

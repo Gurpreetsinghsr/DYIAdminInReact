@@ -1,4 +1,4 @@
-import HeaderUpdateButton from "../commanComponents/header";
+import HeaderUpdateButton from "../../commanComponents/header";
 import AllCountriesSelect from "./allCountriesSelect";
 import BasicEventInfo from "./basicEventInfo";
 import EventBranding from "./eventBranding";
